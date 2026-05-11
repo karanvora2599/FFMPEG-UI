@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 222 18% 10%;
+    --foreground: 210 20% 90%;
+    --card: 222 18% 13%;
+    --card-foreground: 210 20% 90%;
+    --popover: 222 18% 11%;
+    --popover-foreground: 210 20% 90%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 18% 10%;
+    --secondary: 222 18% 18%;
+    --secondary-foreground: 210 20% 90%;
+    --muted: 222 18% 16%;
+    --muted-foreground: 215 14% 55%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 222 18% 10%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 222 18% 20%;
+    --input: 222 18% 18%;
+    --ring: 217 91% 60%;
+    --radius: 0.5rem;
+    --panel-bg: 222 18% 11%;
+    --surface: 222 18% 15%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-size: 13px;
+    overflow: hidden;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}
